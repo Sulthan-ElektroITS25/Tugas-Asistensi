@@ -7,10 +7,10 @@ void konversiKeBiner4Bit(int angka, char *binerStr) {
     for (i = 3; i >= 0; i--) {
         binerStr[3 - i] = ((angka >> i) & 1) + '0';
     }
-    binerStr[4] = '\0'; // Akhiri string
+    binerStr[4] = '\0';
 }
 
-// Fungsi untuk menentukan genap atau ganjil
+// Fungsi untuk menentukan angka genap atau ganjil
 void cekGenapGanjil(int angka) {
     if (angka % 2 == 0) {
         printf("Bilangan tersebut adalah GENAP\n");
