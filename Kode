@@ -22,11 +22,11 @@ void cekGenapGanjil(int angka) {
 int main() {
     int angka;
     char biner[5]; // 4 bit + null terminator
-    printf("Masukkan bilangan desimal (0–15): ");
+    printf("Masukkan bilangan desimal 4 bit (0–15): ");
     scanf("%d", &angka);
 
     if (angka < 0 || angka > 15) {
-        printf("Angka biner tidak termasuk dalam biner 4-bit.\n");
+        printf("Angka biner tidak termasuk dalam biner 4 bit.\n");
         return 1;
     }
 
