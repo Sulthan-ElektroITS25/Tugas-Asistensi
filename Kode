@@ -26,7 +26,7 @@ int main() {
     scanf("%d", &angka);
 
     if (angka < 0 || angka > 15) {
-        printf("Angka biner tidak termasuk dalam biner 4 bit.\n");
+        printf("Angka desimal tidak termasuk dalam biner 4 bit.\n");
         return 1;
     }
 
