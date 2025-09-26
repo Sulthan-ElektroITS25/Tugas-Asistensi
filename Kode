@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <string.h>
+
+// Fungsi untuk mengonversi bilangan desimal ke biner 4-bit
+void konversiKeBiner4Bit(int angka, char *binerStr) {
+    int i;
+    for (i = 3; i >= 0; i--) {
+        binerStr[3 - i] = ((angka >> i) & 1) + '0';
+    }
+    binerStr[4] = '\0'; // Akhiri string
+}
+
+// Fungsi untuk menentukan genap atau ganjil
+void cekGenapGanjil(int angka) {
+    if (angka % 2 == 0) {
+        printf("Bilangan tersebut adalah GENAP\n");
+    } else {
+        printf("Bilangan tersebut adalah GANJIL\n");
+    }
+}
+
+int main() {
+    int angka;
+    char biner[5]; // 4 bit + null terminator
+
+    printf("Masukkan bilangan desimal (0–15): ");
+    scanf("%d", &angka);
+
+    if (angka < 0 || angka > 15) {
+        printf("Angka biner tidak termasuk dalam biner 4-bit.\n");
+        return 1;
+    }
+
+    konversiKeBiner4Bit(angka, biner);
+    printf("Biner 4-bit: %s\n", biner);
+    cekGenapGanjil(angka);
+
+    return 0;
+}
